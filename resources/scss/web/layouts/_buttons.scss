@@ -1,0 +1,48 @@
+%btn {
+    @include rounded;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 100px;
+    padding: 0.25rem 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    width: fit-content;
+
+    cursor: pointer;
+}
+
+.btn-primary {
+    @extend %btn;
+
+    background-color: $primary-500;
+    color: $white;
+
+    &:hover {
+        background-color: $primary-400;
+    }
+
+    &:focus {
+        background-color: $primary-600;
+    }
+}
+
+.btn-secondary {
+    @extend %btn;
+
+    color: $primary-500;
+    border: 1px solid $primary-500;
+
+    &:hover {
+        color: $primary-400;
+        border-color: $primary-400;
+    }
+
+    &:focus {
+        color: $primary-600;
+
+        border-color: $primary-600;
+    }
+}

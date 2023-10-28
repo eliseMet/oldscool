@@ -1,0 +1,21 @@
+.header {
+    @include container;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+
+    &-logo {
+        object-fit: contain;
+    }
+
+    &-right,
+    &-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &-item {
+        height: fit-content;
+    }
+}

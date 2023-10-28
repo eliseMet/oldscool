@@ -1,0 +1,7 @@
+.border-grey-300 {
+    border-color: var(--grey-300);
+}
+
+.rounded {
+    @include rounded;
+}

@@ -1,0 +1,17 @@
+// Color
+.text-white {
+    color: $white;
+}
+
+.text-danger-500 {
+    color: $danger-500;
+}
+
+// Size
+.text-4xl {
+    @include text-4xl;
+}
+
+.text-2xl {
+    @include text-2xl;
+}

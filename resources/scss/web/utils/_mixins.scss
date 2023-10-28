@@ -1,0 +1,223 @@
+// Shadow
+@mixin shadow-xs {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.07);
+}
+
+@mixin shadow-sm {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+@mixin shadow-md {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.14);
+}
+
+@mixin shadow-lg {
+    box-shadow: 20px 4px 54px rgba(0, 0, 0, 0.06);
+}
+
+// Rounded
+
+@mixin rounded {
+    border-radius: 4px;
+}
+
+@mixin rounded-lg {
+    border-radius: 8px;
+}
+
+// Font size
+@mixin text-xs($weight : regular) {
+    font-size: 14px;
+    line-height: 16px;
+
+    @if $weight ==regular {
+        font-weight: 400;
+    }
+
+    @if $weight ==medium {
+        font-weight: 500;
+    }
+
+    @if $weight ==bold {
+        font-weight: 700;
+    }
+}
+
+@mixin text-sm($weight : regular) {
+    font-size: 14px;
+    line-height: 20px;
+
+    @if $weight ==regular {
+        font-weight: 400;
+    }
+
+    @if $weight ==medium {
+        font-weight: 500;
+    }
+
+    @if $weight ==bold {
+        font-weight: 700;
+    }
+}
+
+@mixin text-md($weight : regular) {
+    font-size: 16px;
+    line-height: 24px;
+
+    @if $weight ==regular {
+        font-weight: 400;
+    }
+
+    @if $weight ==medium {
+        font-weight: 500;
+    }
+
+    @if $weight ==bold {
+        font-weight: 700;
+    }
+}
+
+@mixin text-lg($weight : regular) {
+    font-size: 18px;
+    line-height: 26px;
+
+    @if $weight ==regular {
+        font-weight: 400;
+    }
+
+    @if $weight ==medium {
+        font-weight: 500;
+    }
+
+    @if $weight ==bold {
+        font-weight: 700;
+    }
+}
+
+@mixin text-xl($weight : regular) {
+    font-size: 20px;
+    line-height: 28px;
+
+    @if $weight ==regular {
+        font-weight: 400;
+    }
+
+    @if $weight ==medium {
+        font-weight: 500;
+    }
+
+    @if $weight ==bold {
+        font-weight: 700;
+    }
+}
+
+@mixin text-2xl($weight : regular) {
+    font-size: 24px;
+    line-height: 30px;
+
+    @if $weight ==regular {
+        font-weight: 400;
+    }
+
+    @if $weight ==medium {
+        font-weight: 500;
+    }
+
+    @if $weight ==bold {
+        font-weight: 700;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 22px;
+        line-height: 28px;
+    }
+}
+
+@mixin text-3xl($weight : regular) {
+    font-size: 30px;
+    line-height: 36px;
+
+    @if $weight ==regular {
+        font-weight: 400;
+    }
+
+    @if $weight ==medium {
+        font-weight: 500;
+    }
+
+    @if $weight ==bold {
+        font-weight: 700;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
+
+@mixin text-4xl($weight : regular) {
+    font-size: 40px;
+    line-height: 46px;
+
+    @if $weight ==regular {
+        font-weight: 400;
+    }
+
+    @if $weight ==medium {
+        font-weight: 500;
+    }
+
+    @if $weight ==bold {
+        font-weight: 700;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+// Input
+@mixin default-input {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding-inline: 14px;
+    outline: 1px solid var(--grey-300);
+
+    @include text-md;
+    @include shadow-xs;
+    @include rounded;
+
+    input {
+        font-size: 16px;
+        outline: none;
+        background: none;
+        border: none;
+    }
+}
+
+// List
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin reset-input {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+// container 
+@mixin container {
+    max-width: $container-width;
+    padding-inline: $container-padding;
+    margin: auto;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        padding-inline: calc($container-padding / 2);
+    }
+}

@@ -1,0 +1,9 @@
+.container {
+    padding-inline: 2rem;
+    max-width: $container-width;
+    margin: auto;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        padding-inline: 1rem;
+    }
+}
