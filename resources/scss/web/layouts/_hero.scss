@@ -1,0 +1,59 @@
+
+/* HERO*/
+.hero {
+	position: relative;
+	height: 80vh;
+	width: 100%;
+    margin-top: 5px;
+    margin-bottom: 30px;
+	// &::after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	inset: 0;
+	// 	background-color: black;
+	// 	opacity: 0.3;
+	// }
+	&-background-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&-content {
+		@include rounded;
+		position: absolute;
+		padding: 2rem 2rem;
+		
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		
+		max-width: 800px;
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+		
+		background-color: rgba($color: $white, $alpha: 0.7);
+		z-index: 1;
+	}
+	&-title {
+		font-size: 40px;
+		text-align: center;
+		// margin-bottom: 30px;
+	}
+	
+	&-text {
+		font-size: 15px;
+		text-align: center;
+		
+		// &::after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	inset: 0;
+		// 	background-color: black;
+		// 	opacity: 0.3;
+		// }
+	}
+}

@@ -6,6 +6,8 @@
 
     &-logo {
         object-fit: contain;
+        display: flex;
+        align-items: center;
     }
 
     &-right,

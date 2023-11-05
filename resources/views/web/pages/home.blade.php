@@ -5,9 +5,20 @@
 
 
 @section('content')
-<section class="container">
-    <h1 class="text-4xl my-8">Welcome</h1>
-</section>
+
+<section>
+    <div class="hero">
+      <img class="hero-background-img" src="img/web/photoAcceuil.png" alt="Mon fond">
+      <div class="hero-content">
+        <h2 class = "text-russo hero-title">Deux Générations, Un Moment </h2>
+        <p class="hero-text"> Vous êtes étudiant et vous souhaitez faire des rencontres tout en apprennant, ne cherchez plus, inscrivez-vous ! Vous êtes un jeune retraité qui souhaite transmettre une passion à la jeune génération, inscrivez-vous !
+        </p>
+        <button class="btn-primary btn-xl">Nous rejoindre</button>
+      </div>
+    </div>
+    
+  </section>
+
 <section class="container">
     <div class="grid grid-cols-2 gap-4">
         <x-card class="flex-1">

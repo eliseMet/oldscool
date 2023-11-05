@@ -46,3 +46,9 @@
         border-color: $primary-600;
     }
 }
+
+//SIZE
+.btn-xl{
+    @include text-xl;
+    padding-inline: 2rem;
+}
