@@ -3,18 +3,19 @@
         <li class="header-item">
             <a href="#" class="header-link">
                 <picture>
-                    <source srcset="{{asset('img/web/logo.webp')}}">
-                    <img src="{{asset('img/web/logo.webp')}}" alt="Logo laravel blanc" class="header-logo" width="115" height="36">
+                    <source srcset="{{asset('img/web/logoCercle2.webp')}}">
+                    <img src="{{asset('img/web/logoCercle2.png')}}" alt="Logo Olds cool" class="header-logo" width="100" height="100">
                 </picture>
             </a>
         </li>
-        <li class="header-item"><a href="#" class="header-link">Link 1</a></li>
-        <li class="header-item"><a href="#" class="header-link">Link 2</a></li>
-        <li class="header-item"><a href="#" class="header-link">Link 3</a></li>
-        <li class="header-item"><a href="#" class="header-link">Link 4</a></li>
+        <li><img src="{{asset('img/web/typo-black.png')}}" alt="typo Olds cool" class="header-logo" width="200" height="100"></li>
     </ul>
     <ul class="header-right">
-        <li class="header-item"><a href="#" class="header-link">Register</a></li>
-        <li class="header-item"><a href="#" class="header-link btn-primary">Login</a></li>
+        
+        <li class="header-item"><a href="#" class="header-link"><strong> Contact </strong></a></li>
+        <li class="header-item"><a href="#" class="header-link"><strong> Aide </strong></a></li>
+        <li class="header-item"><a href="#" class="header-link"><strong> A propos </strong></a></li>
+
+        <li class="header-item"><a href="#" class="header-link btn-primary">Nous rejoindre</a></li>
     </ul>
 </header>
