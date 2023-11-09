@@ -1,6 +1,6 @@
 <div {{ $attributes->merge(['class' => 'card']) }}>
     @if (isset($head))
-        <div class="card-head">
+        <div class="card-header">
             {{$head}}   
         </div>        
     @endif
