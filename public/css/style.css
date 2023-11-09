@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*importation de la police*/
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+/* VARIABLES */
+:root { /*declaration des variables*/
+
+    --white: #fff;
+
+    --grey-200: rgb(208, 205, 205);
+    --grey-500: #707070;
+    --grey-900: #212121;
+
+    --primary-600: rgb(11, 104, 31);
+    --primary-700: rgb(2, 67, 16);
+
+
+}
+
+/* RESET */
+/*mettre box sizing partout*/
+*,*::after,*::before {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none; /* enleve le soulignage*/
+    color: var(--primary-600);
+}
+
+h2 {/*gérance de la position, taille et police du titre 2 (slogan)*/
+    font-family: fantasy, sans-serif;
+    font-size: 35px;
+}
+
+body {
+
+    /* background-image: url("imageDeFond3.jpeg");
+    background-size: cover; 
+    background-repeat: no-repeat; */
+
+    font-family: Arial, sans-serif;
+    color: var(--grey-900);
+    padding: 0; /* marge interne */
+    margin: 0; /* marge externe */
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; /*enlever les puces*/
+}
+
+label {
+    display: block;
+    width: fit-content;
+}
+
+input{
+
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+
+input[type="text"], input[type="password"] {
+
+    width: 100%;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    height: 2rem;
+}
+
+input[type="submit"]{
+
+    grid-area: bt;
+
+    padding-inline: 0.5rem;
+    background-color: var(--primary-600);
+    color: var(--white);
+    border-radius: 8px;
+    transition: 0.3s ease-in-out; /* transition entre deux elements*/
+    
+    min-width: 10rem;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif
+}
+
+input[type="submit"]:hover {
+    background: var(--primary-700);
+    color: var(--white); /*couleur du script*/
+}
+
+form {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+/* span {
+
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+
+} */
+
+/* COMPOSANTS */
+
+.text-4xl {/*gérance de la position, taille et police du titre 1 (nom)*/
+    text-transform: uppercase; /* mettre en majuscule */
+    letter-spacing: 2px; /*espace entre les lettres*/
+    font-size: 2.5rem; /*taille de la police*/
+    /* 1 rem = 16 px(pixel), pour la taille du texte on parle en rem */
+    color: var(--grey-900);
+    /* text-shadow: 3px 0 0 orange; axe X Y , le flou et la couleur */
+    text-align: center;
+    margin:0;
+    padding: 0;
+}
+
+.text-4x2 {
+    /* text-align: center; */
+    font-size: 1.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 0; /* marge interne */
+    margin: 0; /* marge externe */
+}
+.text-bebas {
+    font-family: 'Bebas Neue', sans-serif; /*police (utiliser la police 'horizon')*/   
+}
+
+.text-russo {
+    font-family: 'Russo One', sans-serif; 
+}
+
+.text-center {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text-discret {
+    color: var(--grey-500);
+}
+
+.container {
+    padding-inline: 2rem;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.card {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px 5px rgba(0, 0, 0, 0.12)
+}
+
+
+/*  HEADER  */
+.header {
+    display: flex; /* mettre les elements les un a cote des autres*/
+    align-items: center; /* ne s'utilise qu'avec 'flex' alignement vertical*/
+    justify-content: space-between; /* reparti les elements horizontalement (avec flex) */
+    /* background-color: #333; */
+    height: 100px;
+    padding-inline: 2rem; /*marge droite et gauche*/
+
+    border-bottom: 1px solid var(--grey-200);
+
+    /* background-color: var(--fond-600); */
+}
+
+.header .logo { /*gérance de la position et taille du logo (qui est dans le header)*/
+
+    width: 100px;
+    object-fit: contain; /*ne se fait pas tronquer*/
+}
+
+.header-link { /*gérance des liens du header (style)*/
+    font-size: 20px; /*taille de la police*/
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--grey-900);
+    text-decoration: underline;
+}
+
+.header-nav {
+    display: flex;
+    gap: 1rem; /*met un gap entre tout les elements enfants (avec flex)*/
+    align-items: center ;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* BOUTONS */
+
+/* button[type="submit"] {
+
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+
+    padding: 12px 20px;
+    width: 15rem;
+
+    cursor: pointer;
+    transition: 0.3s ease-in-out;  transition entre deux elements
+
+    align-items: center;
+
+}
+
+button[type="submit"]:hover {
+
+    background-color: #45a049;
+
+} */
+
+.btn-primary {
+    padding-inline: 0.5rem;
+    background-color: var(--primary-600);
+    color: var(--white);
+    border-radius: 8px;
+    transition: 0.3s ease-in-out; /* transition entre deux elements*/
+    
+    min-width: 10rem;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif
+
+}
+
+.btn-primary:hover { /* 'hover' = survol de la souris */
+    background-color: var(--primary-700);  
+}
+.btn-home {
+    margin-bottom: 200px;
+}
+
+.btn-main {
+    padding-inline: 0.5rem;
+    background-color: white;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out; /* transition entre deux elements*/
+    
+    min-width: 10rem;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 2.5rem;
+    
+
+    text-transform: uppercase; /* mettre en majuscule */
+    letter-spacing: 2px; /*espace entre les lettres*/
+    font-size: 2.5rem; /*taille de la police*/
+    /* 1 rem = 16 px(pixel), pour la taille du texte on parle en rem */
+    color: var(--grey-900);
+    /* text-shadow: 3px 0 0 orange; axe X Y , le flou et la couleur */
+    margin:0;
+    padding: 0;
+
+    font-family: 'Bebas Neue', sans-serif
+
+}
+
+.btn-main:hover { /* 'hover' = survol de la souris */
+    color: lightgrey;  
+}
+
+/* FORMULAIRE */
+
+.m-auto {
+    margin: auto;
+}
+
+.display-block {
+    display: block;
+}
+
+.card-form{
+    margin: auto;
+    margin-top: 5rem;
+    width: 450px;
+
+    display: flex;
+    flex-direction: column; /*alignement en colonne (inverse les alignements)*/
+    align-items: center;
+
+}
+
+
+/* FORMULAIRE */
+
+.m-auto {
+    margin: auto;
+}
+
+.display-block {
+    display: block;
+}
+
+.card-form{
+    margin: auto;
+    margin-top: 5rem;
+    width: 450px;
+
+    display: flex;
+    flex-direction: column; /*alignement en colonne (inverse les alignements)*/
+    align-items: center;
+
+}
+
+/* HERO*/
+
+.hero{
+    position: relative;
+    height: 80vh;
+    width: 100%;
+}
+.hero::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background-color: black;
+    opacity: 0.3;
+}
+.hero-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    width: 100%;
+    z-index: 1; /* premier plan*/
+
+    color: white;
+}
+
+.hero-title {
+    font-size: 43px;
+}
+
+/* .filter-grey {
+    filter: grayscale(30%);
+  } */
+
+.relative {
+    position: relative;
+}
+
+/* REVIEWS */
+
+.review-cards {
+    display: flex; /*aligne les elements de la liste*/
+    justify-content: space-around; /*séparer les boites et les répartir*/
+    padding: 0;
+    gap: 1rem;
+
+}
+
+.review-cards .card { /*focalise les card dans review cards*/
+    flex: 1; /*si parent a un display flex, flex:1 => repartir la taille des elements uniformement*/
+}
+
+.review-profil {
+    display: flex;
+    gap: 1rem;
+}
+.review-picture {
+    width: 50px;
+    height: 50px;
+}
+
+.titre-card {
+    display: flex;
+    gap: 10px;
+}
+
+.circle {
+    border-radius: 50%;
+    overflow: hidden; /*masque les parties de l'image qui dépassent du cercle.*/
+  }
+  
+  .circle img {
+    width: 100%; /*à 100% de la balise <img> permet de redimensionner l'image pour qu'elle remplisse le cercle.*/
+    height: auto; /*est automatiquement ajustée pour maintenir les proportions de l'image.*/
+  }
+
+
+/* page 'Nous rejoindre' */
+
+.display1 {
+    display: flex;
+    gap: 1rem;
+}
+
+.switch-picture2 {
+    width: 100%;
+    height: auto;
+    border-radius: 2%;
+}
+
+.review-cards2 {
+    width: 20rem;
+    height: 30rem;
+}
+
+.center1 {
+    justify-content: center;
+}
+
+.gap-vertical {
+    margin-bottom: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*page d'inscription*/
+
+.grid-container{
+    /* répartition de l'espace entre les enfants : */
+    display: grid;
+    padding: 20px;
+}
+
+.grid-form{
+    display: grid;
+    /* i = input , ta = texte area et bt = boutton  */
+    grid-template-areas:  
+        "i1 i2"
+        "i3 i3"
+        "i4 i4"
+
+        "bt bt";
+}
+
+#firstname{
+    grid-area: i1;
+}
+#surname{
+    grid-area: i2;
+}
+#email{
+    grid-area: i3;
+}
+#password{
+    grid-area: i4;
+}
+
+
+
+
+
+
+
+
+
+/*activités*/
+
+.activityList {
+    display: flex; /*aligne les elements de la liste*/
+    padding: 0;
+    gap: 1rem;
+    overflow-x: scroll;
+    max-width: 100%;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.activityBox {
+    width: 250px;
+    height: 600px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px 5px rgba(0, 0, 0, 0.12);
+    align-items: center; /* Centrer les éléments horizontalement */
+    display: flex;
+    flex-direction: column;
+}
+
+.activityPicture {
+    width: 200px;
+    height: 200px;
+}
+
+.activityName {
+    font-size: 24px; /* Augmente la taille du texte */
+    text-align: center; /* Centre le texte dans la boîte */
+    margin: 10px 0; /* Ajoute un peu d'espacement au-dessus et au-dessous du prénom */
+}
+
+.activityTitle {
+    font-size: 20px;
+    text-align: center;
+    margin: 15px 0;
+    color: #333; /* Vous pouvez choisir la couleur que vous préférez */
+}
+
+.activityDescription {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #666; /* Vous pouvez choisir la couleur que vous préférez */
+    overflow: auto;
+    max-width: 230px;
+    word-wrap: break-word;
+}
+
+.btn-activity {
+    margin-top: auto;
+}
+
+.availability {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 20px 0; 
+}
+
+.availability th, .availability td {
+    padding: 8px; 
+    text-align: left; 
+    border-bottom: 1px solid #ddd; 
+}
+
+.availability th {
+    background-color: #f2f2f2; 
+}
+
+
+

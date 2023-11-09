@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('web.pages.home');
 });
+
+Route::get('/nousrejoindre', function () {
+    return view('web.pages.page_nous_rejoindre');
+});
+
+Route::get('/activites', 'ActivityController@index');
