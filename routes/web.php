@@ -21,4 +21,8 @@ Route::get('/nousrejoindre', function () {
     return view('web.pages.page_nous_rejoindre');
 });
 
+Route::get('/test', function () {
+    return view('web.pages.test');
+});
+
 Route::get('/activites', 'ActivityController@index');
