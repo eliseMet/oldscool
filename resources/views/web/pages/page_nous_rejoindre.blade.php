@@ -46,7 +46,7 @@
                             <p class="gap-vertical " style="text-align: center;">
                                 Je suis ici pour transmettre quelque chose à une prochaine génération.
                             </p>
-                            <a class="btn-primary" href="{{ url('/pageInscription') }}" >Je souhaite m'inscrire</a> 
+                            <a class="btn-primary" href="{{ url('/inscription') }}" >Je souhaite m'inscrire</a> 
                         </div>
                     </div>
     
@@ -56,7 +56,7 @@
                             <p class="gap-vertical " style="text-align: center;">
                                 Je suis ici pour apprendre quelque chose d'une génération précédente.
                             </p>
-                            <a class="btn-primary" href="{{ url('/pageInscription') }}" >Je souhaite m'inscrire</a> 
+                            <a class="btn-primary" href="{{ url('/inscription') }}" >Je souhaite m'inscrire</a> 
                         </div>
                     </div>
                 </div>
