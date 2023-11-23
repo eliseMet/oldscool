@@ -3,9 +3,9 @@
 <head>
     <title>Page d'inscription</title>
     <!-- lien vers le css -->
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- favicon -->
-    <link rel="icon" href="{{ asset('logoICON/logoCercle1.ico') }}" />
+    <link rel="icon" href="{{ asset('images/logoICON/logoCercle1.ico') }}" />
     <!-- encodage (accents etc) -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <div class="header-logo" >
-            <img class="logo" src="{{ asset('logoPNG/logoCercle1.png') }}" alt="Mon logo">
+            <img class="logo" src="{{ asset('images/logoPNG/logoCercle1.png') }}" alt="Mon logo">
             <a class="btn-main" href="{{ url('/pagePrincipale') }}">old's cool</a>
         </div>
         <div class="display1">

@@ -27,7 +27,7 @@
       
             <div class="display1">
                 <p class="text-discret">Vous avez déjà un compte ? </p>
-                <a class="btn-primary" href="{{ url('/pageConnexion') }}" >Se connecter</a> 
+                <a class="btn-primary" href="{{ url('/connexion') }}" >Se connecter</a> 
             </div>
 
         </header>
