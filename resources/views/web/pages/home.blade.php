@@ -10,7 +10,7 @@
     <div class="hero">
       <img class="hero-background-img" src="img/web/photoAcceuil.png" alt="Mon fond">
       <div class="hero-content">
-        <h2 class = "text-russo hero-title">Deux Générations, Un Moment </h2>
+        <h2 class = "text-russo hero-title">Deux Générations, Une Passion Patargée </h2>
         <p class="hero-text"> Vous êtes étudiant et vous souhaitez faire des rencontres tout en apprennant, ne cherchez plus, inscrivez-vous ! Vous êtes un jeune retraité qui souhaite transmettre une passion à la jeune génération, inscrivez-vous !
         </p>
         <button class="btn-primary btn-xl">Nous rejoindre</button>
