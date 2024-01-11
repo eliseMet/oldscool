@@ -1,0 +1,30 @@
+.grid-container{
+    /* répartition de l'espace entre les enfants : */
+    display: grid;
+    padding: 20px;
+}
+
+.grid-form{
+    display: grid;
+    /* i = input , ta = texte area et bt = boutton  */
+    grid-template-areas:  
+        "i1 i2"
+        "i3 i3"
+        "i4 i4"
+
+        "bt bt";
+}
+
+#firstname{
+    grid-area: i1;
+}
+#surname{
+    grid-area: i2;
+}
+#email{
+    grid-area: i3;
+}
+#password{
+    grid-area: i4;
+}
+

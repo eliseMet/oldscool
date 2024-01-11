@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+
+
 <head>
     <title>Connecté</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -32,4 +32,3 @@
         <a class="btn-primary btn-home" href="{{ url('/profil') }}">Profil</a>
     </main>
 </body>
-</html>

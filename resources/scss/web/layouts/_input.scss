@@ -1,0 +1,21 @@
+input[type="submit"]{
+
+    grid-area: bt;
+
+    padding-inline: 0.5rem;
+    background-color: $primary-600;
+    color: $white;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out; /* transition entre deux elements*/
+    
+    min-width: 10rem;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif
+}

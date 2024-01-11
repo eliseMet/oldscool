@@ -56,3 +56,21 @@
         }
     }
 }
+
+
+
+
+.card-form{
+    margin: auto;
+    margin-top: 5rem;
+    width: 450px;
+
+    display: flex;
+    flex-direction: column; /*alignement en colonne (inverse les alignements)*/
+    align-items: center;
+
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px 5px rgba(0, 0, 0, 0.12)
+
+}
