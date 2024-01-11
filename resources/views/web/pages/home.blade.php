@@ -14,10 +14,11 @@
     <div class="hero">
       <img class="hero-background-img" src="img/web/photoAcceuil.png" alt="Mon fond">
       <div class="hero-content">
-        <h2 class = "hero-title">Deux Générations, Un Moment </h2>
+        <h2 class = "text-russo hero-title">Deux Générations,</h2>
+        <h2 class = "text-russo hero-title">Une Passion Patargée</h2>
         <p class="hero-text"> Vous êtes étudiant et vous souhaitez faire des rencontres tout en apprennant, ne cherchez plus, inscrivez-vous ! Vous êtes un jeune retraité qui souhaite transmettre une passion à la jeune génération, inscrivez-vous !
         </p>
-        <button class="btn-primary btn-xl">Nous rejoindre</button>
+        <button class="btn-primary btn-xl" href="{{ url('/nousrejoindre')}}">Nous rejoindre</button>
       </div>
     </div>
 </section>
@@ -35,7 +36,7 @@
     <div class="flex gap-4">
         <x-card class="flex-1">
             <x-slot:head>
-               <h2>H2 Title</h2> 
+               <h2>Avis 1</h2> 
         </x-slot:head>
             <x-slot:main>
                 <div>
@@ -51,7 +52,7 @@
 
         <x-card class="flex-1">
             <x-slot:head>
-                <h2>H2 Title</h2> 
+                <h2>Avis 2</h2> 
             </x-slot:head>
             <x-slot:main>
                 <div>
