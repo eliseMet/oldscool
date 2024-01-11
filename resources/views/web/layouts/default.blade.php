@@ -6,10 +6,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         {{-- Meta --}}
-        <title>MonSite - @yield('title')</title>
+        <title>Old's Cool - @yield('title')</title>
         <meta name="description" content="@yield('meta-description')" />
 
         {{-- Favicon --}}
+        @yield('favicon')
         {{-- <link rel="icon" type="image/png" href="" /> --}}
 
         <!-- CSS/JS -->

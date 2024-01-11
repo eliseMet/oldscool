@@ -3,8 +3,8 @@
         <li class="header-item">
             <a href="#" class="header-link">
                 <picture>
-                    <source srcset="{{asset('img/web/logoCercle2.webp')}}">
-                    <img src="{{asset('img/web/logoCercle2.png')}}" alt="Logo Olds cool" class="header-logo" width="50" height="50">
+                    <source srcset="{{asset('img/web/LOGO.webp')}}">
+                    <img src="{{asset('img/web/LOGO.png')}}" alt="Logo Olds cool" class="header-logo" width="60" height="60">
                 </picture>
             </a>
         </li>
