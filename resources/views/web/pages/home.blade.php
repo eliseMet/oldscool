@@ -14,7 +14,7 @@
         <h2 class = "text-russo hero-title">Une Passion Patargée</h2>
         <p class="hero-text"> Vous êtes étudiant et vous souhaitez faire des rencontres tout en apprennant, ne cherchez plus, inscrivez-vous ! Vous êtes un jeune retraité qui souhaite transmettre une passion à la jeune génération, inscrivez-vous !
         </p>
-        <button class="btn-primary btn-xl">Nous rejoindre</button>
+        <button class="btn-primary btn-xl" href="{{ url('/nousrejoindre')}}">Nous rejoindre</button>
       </div>
     </div>
     

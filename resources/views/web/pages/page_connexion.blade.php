@@ -21,7 +21,7 @@ a<!DOCTYPE html>
 
     <div class="card card-form">
         <h1>Connexion</h1>
-        <form method="POST" action="{{ route('connexion') }}">
+        <form method="POST" action="{{ route('page_connexion') }}">
             @csrf
             <div class="form-group">
                 <label for="email">Adresse mail :</label>
