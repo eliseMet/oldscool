@@ -13,7 +13,7 @@
     <ul class="header-right">
         
         <li class="header-item"><a href="/inscription" class="header-link btn-primary">S'inscrire</a></li>
-        <li class="header-item"><a href="/connexion" class="header-link"><strong>Connexion</strong></a></li>
+        <li class="header-item"><a href="/connection" class="header-link"><strong>Connexion</strong></a></li>
 
     </ul>
 </header>

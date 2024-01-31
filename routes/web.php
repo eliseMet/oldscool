@@ -17,28 +17,24 @@ Route::get('/', function () {
     return view('web.pages.home');
 });
 
-Route::get('/nousrejoindre', function () {
-    return view('web.pages.page_nous_rejoindre');
-});
-
 Route::get('/inscription', function () {
     return view('web.pages.inscription');
 });
 
-Route::get('/connexion', function () {
-    return view('web.pages.connexion');
+Route::get('/connection', function () {
+    return view('web.pages.connection');
 });
 
-Route::get('/activites', function () {
-    return view('web.pages.activites');
+Route::get('/activities', function () {
+    return view('web.pages.activities');
+});
+
+Route::get('/newActivity', function () {
+    return view('web.pages.newActivity');
 });
 
 Route::get('/test', function () {
     return view('web.pages.test');
-});
-
-Route::get('/pagePrincipale', function () {
-    return view('web.pages.page_principale');
 });
 
 Route::get('/activites', 'ActivityController@index');
