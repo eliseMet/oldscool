@@ -22,15 +22,11 @@ Route::get('/nousrejoindre', function () {
 });
 
 Route::get('/inscription', function () {
-    return view('web.pages.page_inscription');
+    return view('web.pages.inscription');
 });
 
 Route::get('/connexion', function () {
-    return view('web.pages.page_connexion');
-});
-
-Route::get('/accueil_connexion', function () {
-    return view('web.pages.accueil_connexion');
+    return view('web.pages.connexion');
 });
 
 Route::get('/activites', function () {
