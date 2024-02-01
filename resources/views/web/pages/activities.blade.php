@@ -13,7 +13,7 @@
 <section>
   <div class="activityList">
     <!-- Exemple d'activité statique -->
-    <div class="activityBox">
+    <div class="activity-box">
       <img class="activityPicture" src="{{ asset('images/avatars/avatarM.jpg') }}" alt="photo de profil monique">
       <h3 class="activityName">Monique, 64 ans</h3>
       <h4 class="activityTitle">Yoga</h4>
