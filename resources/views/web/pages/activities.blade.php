@@ -11,24 +11,24 @@
 @section('content')
 
 <section>
-  <div class="activityList">
+  <div class="activity-list">
     <!-- Exemple d'activité statique -->
     <div class="activity-box">
-      <img class="activityPicture" src="{{ asset('images/avatars/avatarM.jpg') }}" alt="photo de profil monique">
-      <h3 class="activityName">Monique, 64 ans</h3>
-      <h4 class="activityTitle">Yoga</h4>
-      <p class="activityDescription">Rejoignez Monique pour une session de yoga relaxante et revitalisante. Adaptée à tous les niveaux.</p>
+      <img class="activity-picture" src="{{ asset('images/avatars/avatarM.jpg') }}" alt="photo de profil monique">
+      <h3 class="activity-name">Monique, 64 ans</h3>
+      <h4 class="activity-title">Yoga</h4>
+      <p class="activity-description">Rejoignez Monique pour une session de yoga relaxante et revitalisante. Adaptée à tous les niveaux.</p>
       <!-- ... -->
     </div>
 
     <!-- Activités dynamiques depuis la base de données -->
     {{-- @if ($activities)
       @foreach ($activities as $activity)
-        <div class="activityBox">
-          <img class="activityPicture" src="{{ asset('images/avatars/jean.jpg') }}" alt="photo de profil jean">
-          <h3 class="activityName">{{ $activity->first_name }}, {{ $activity->age }} ans</h3>
-          <h4 class="activityTitle">{{ $activity->activity }}</h4>
-          <p class="activityDescription">{{ $activity->description }}</p>
+        <div class="activity-box">
+          <img class="activity-picture" src="{{ asset('images/avatars/jean.jpg') }}" alt="photo de profil jean">
+          <h3 class="activity-name">{{ $activity->first_name }}, {{ $activity->age }} ans</h3>
+          <h4 class="activity-title">{{ $activity->activity }}</h4>
+          <p class="activity-description">{{ $activity->description }}</p>
           <a class="btn-primary btn-activity" href="#" >Réserver</a>
         </div>
       @endforeach
