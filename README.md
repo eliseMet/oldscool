@@ -17,6 +17,9 @@ npm install
 cp .env.example .env
 php artisan key:generate
 
+# lancer la migration pour récupérer la base de données (sans les données des autres)
+php artisan migrate 
+
 # build CSS and JS assets
 npm run dev
 # or, if you prefer minified files
@@ -41,3 +44,13 @@ Copyright 2018 Prismic.io (https://prismic.io).
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+## Migrations
+
+--> Le champs 'id' des tables se créer automatiquement
+--> Si une migration est push, NE PAS la modifier. Il faut créer une nouvelle migration pour la modifier
+--> Pour supprimer une table il faut créer une migration (voir norme des commandes)
+
+--> password_reset_tokens sert à stocker les tokens d'accès avec des dates de validité
+--> failed_jobs sert à voir les erreurs sur les tâches de fond (queues)
+--> personal_access_token token d'accès pour les API (pas sûr) ne pas supprimer
