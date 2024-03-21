@@ -12,8 +12,8 @@
     </ul>
     <ul class="header-right">
         @guest
-            <li class="header-item"><a href="/user/registration" class="header-link btn-primary">S'inscrire</a></li>
-            <li class="header-item"><a href="/connection" class="header-link"><strong>Connexion</strong></a></li>
+            <li class="header-item"><a href="{{route('user.registration')}}" class="header-link btn-primary">S'inscrire</a></li>
+            <li class="header-item"><a href="{{route('user.connection')}}" class="header-link"><strong>Connexion</strong></a></li>
         @endguest
 
         @auth

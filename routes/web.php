@@ -20,10 +20,14 @@ Route::get('/', function () {
 })->name("home");
 
 Route::name("user.")->prefix("user")->group(function () {
-    //
+    //Registration page
     Route::get('/registration', [UserController::class, 'registration'])->name("registration");
+    //Connection page
+    Route::get('/connection', [UserController::class, 'connection'])->name("connection");
     //Add a new user
     Route::post('/store', [UserController::class, 'store'])->name("store");
+    //Authenticate a user
+    Route::post('/authenticate', [UserController::class, 'authenticate'])->name("authenticate");
     //Get all default pictures
     Route::get('/default-profile-pictures', [ImageController::class, 'getDefaultPictures']);
 
