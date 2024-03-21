@@ -2,13 +2,6 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
-use Illuminate\Http\Request;
-
-class UserController extends Controller
-{
-    //
-=======
 use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -41,5 +34,4 @@ class UserController extends Controller
 
         return redirect()->route('home');
     }
->>>>>>> 3dcee82e66d16851938d2fe8177a9657c8d0d059
 }
