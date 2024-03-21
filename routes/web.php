@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,10 +17,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('web.pages.home');
+})->name("home");
+
+Route::name("user.")->prefix("user")->group(function () {
+    //
+    Route::get('/registration', [UserController::class, 'registration'])->name("registration");
+    //Add a new user
+    Route::post('/store', [UserController::class, 'store'])->name("store");
+    //Get all default pictures
+    Route::get('/default-profile-pictures', [ImageController::class, 'getDefaultPictures']);
+
+    Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 });
 
-Route::get('/inscription', function () {
-    return view('web.pages.inscription');
+Route::name("image.")->prefix("image")->group(function () {
+    //Print image
+    Route::get('/{filename}', [ImageController::class, 'show']);
 });
 
 Route::get('/connection', function () {

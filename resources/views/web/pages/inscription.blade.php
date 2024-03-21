@@ -17,14 +17,59 @@
 <section>
     <div class="card-form">
         <h1>Inscription</h1>
-        <div class="grid-container">
-            <form class="grid-form" method="POST" action="{{ url('/ajoutUtilisateur') }}">
+        <div class="">
+            <form class="" method="POST" action="{{route('user.store')}}">
                 @csrf
-                <input type="text" name="firstname" placeholder="Prénom">
-                <input type="text" name="surname" placeholder="Nom">
-                <input type="text" name="email" placeholder="Adresse mail">
-                <input type="text" name="birthdate" placeholder="Date de naissance">
-                <input type="password" name="password" placeholder="Mot de passe">
+                @method("POST")
+
+                {{-- Pseudo --}}
+                <x-form.formgroup id="pseudo" label="Pseudo :" :error="$errors->first('pseudo')">
+                    <x-form.input-text name="pseudo" :value="old('pseudo')" />                    
+                </x-form.formgroup>
+
+                {{-- Firstname --}}
+                <x-form.formgroup id="firstname" label="Prénom :" :error="$errors->first('firstname')">
+                    {{-- slot --}}
+                    <x-form.input-text name="firstname" :value="old('firstname')" />                    
+                </x-form.formgroup>
+
+                {{-- Lastname --}}
+                <x-form.formgroup id="lastname" label="Nom :" :error="$errors->first('lastname')">
+                    <x-form.input-text name="lastname" :value="old('lastname')"/>                    
+                </x-form.formgroup>
+
+                {{-- Image --}}
+                <x-form.formgroup id="image_id" label="Avatar :" :error="$errors->first('image_id')">
+                    <div id="profile-picture-select-component">
+                        <profile-picture-select-component/>
+                    </div>
+                </x-form.formgroup>
+
+                {{-- Email --}}
+                <x-form.formgroup id="email" label="Adresse mail :" :error="$errors->first('email')">
+                    <x-form.input-text name="email" :value="old('email')"/>                    
+                </x-form.formgroup>
+
+                {{-- Birthday --}}
+                <x-form.formgroup id="birthday" label="Date de naissance :" :error="$errors->first('birthday')">
+                    <x-form.input-text name="birthday" type="date" :value="old('birthday')"/>                    
+                </x-form.formgroup>
+
+                {{-- Phone Number --}}
+                <x-form.formgroup id="phone_number" label="Téléphone :" :error="$errors->first('phone_number')">
+                    <x-form.input-text name="phone_number" pattern="^(06|07|02)[0-9]{8}$" :value="old('phone_number')"/>                    
+                </x-form.formgroup>
+
+                {{-- Password --}}
+                <x-form.formgroup id="password" label="Mot de passe :" :error="$errors->first('password')">
+                    <x-form.input-text name="password" type="password" />                    
+                </x-form.formgroup>
+
+                {{-- Confirm password --}}
+                <x-form.formgroup id="password_confirmation" label="Confirmez votre mot de passe :" :error="$errors->first('password_confirmation')">
+                    <x-form.input-text name="password_confirmation" type="password"/>                    
+                </x-form.formgroup>
+
                 <input type="submit" value="Créer un compte">
             </form>
         </div>

@@ -15,11 +15,10 @@
       <img class="hero-background-img" src="img/web/photoAcceuil.png" alt="Mon fond">
       <div class="hero-content">
         <h2 class = "text-russo hero-title">Deux Générations,</h2>
-        <h2 class = "text-russo hero-title">Une Passion Patargée</h2>
+        <h2 class = "text-russo hero-title">Une Passion Partagée</h2>
         <p class="hero-text"> Vous êtes étudiant et vous souhaitez faire des rencontres tout en apprennant, ne cherchez plus, inscrivez-vous ! Vous êtes un jeune retraité qui souhaite transmettre une passion à la jeune génération, inscrivez-vous !
         </p>
-        <li><a href="/inscription" class="btn-primary btn-xl"><strong>Nous rejoindre</strong></a></li>
-        {{-- teeeeest --}}
+        <li><a href="/user/registration" class="btn-primary btn-xl"><strong>Nous rejoindre</strong></a></li>
         <li><a href="/activities" class="btn-primary btn-xl"><strong>test</strong></a></li>
       </div>
     </div>
