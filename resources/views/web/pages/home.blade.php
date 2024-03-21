@@ -19,7 +19,6 @@
         <p class="hero-text"> Vous êtes étudiant et vous souhaitez faire des rencontres tout en apprennant, ne cherchez plus, inscrivez-vous ! Vous êtes un jeune retraité qui souhaite transmettre une passion à la jeune génération, inscrivez-vous !
         </p>
         <li><a href="/user/registration" class="btn-primary btn-xl"><strong>Nous rejoindre</strong></a></li>
-        {{-- teeeeest --}}
         <li><a href="/activities" class="btn-primary btn-xl"><strong>test</strong></a></li>
       </div>
     </div>

@@ -15,6 +15,11 @@ class UserRequest extends FormRequest
         return true;
     }
 
+    public function validationData()
+    {
+        return array_diff_key($this->all(), array_flip(['_token', '_method']));
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -30,7 +35,7 @@ class UserRequest extends FormRequest
             'lastname' => ['required', 'alpha', 'max:20'],
             'email' => ['required', 'unique:users,email', 'max:255', 'email'],
             'birthday' => ['required', 'date', 'before:' . $date],
-            'phone_number' => ['regex:/^(06|07)[0-9]{8}$/'],
+            'phone_number' => ['regex:/^(06|07)[0-9]{8}$/', 'unique:users,phone_number'],
             'password' => ['required', 'min:8', 'confirmed']
 
         ];
@@ -64,6 +69,7 @@ class UserRequest extends FormRequest
             'birthday.before' => "Vous devez être majeur(e) pour continuer l'inscription.",
 
             'phone_number.regex' => "Le numéro de téléphone doit être dans un format valide.",
+            'phone_number.unique' => "Ce numéro de téléphone est déjà utilisé.",
 
             'password.min' => "Le mot de passe doit contenir au minimum 8 caractères.",
             'password.confirmed' => "Le mot de passe ne correspond pas.",

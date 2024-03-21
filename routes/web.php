@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('web.pages.home');
-});
+})->name("home");
 
 Route::name("user.")->prefix("user")->group(function () {
     //
@@ -26,6 +26,8 @@ Route::name("user.")->prefix("user")->group(function () {
     Route::post('/store', [UserController::class, 'store'])->name("store");
     //Get all default pictures
     Route::get('/default-profile-pictures', [ImageController::class, 'getDefaultPictures']);
+
+    Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 });
 
 Route::name("image.")->prefix("image")->group(function () {
