@@ -3,6 +3,8 @@
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -56,3 +58,6 @@ Route::get('/test', function () {
 });
 
 Route::get('/activites', 'ActivityController@index');
+
+
+Route::get('/activities', [PostController::class, 'index'])->name('activities');

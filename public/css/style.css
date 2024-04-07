@@ -500,22 +500,6 @@ button[type="submit"]:hover {
     white-space: nowrap;
 }
 
-.activityBox {
-    width: 250px;
-    height: 600px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 8px 5px rgba(0, 0, 0, 0.12);
-    align-items: center; /* Centrer les éléments horizontalement */
-    display: flex;
-    flex-direction: column;
-}
-
-.activityPicture {
-    width: 200px;
-    height: 200px;
-}
-
 .activityName {
     font-size: 24px; /* Augmente la taille du texte */
     text-align: center; /* Centre le texte dans la boîte */
@@ -527,15 +511,6 @@ button[type="submit"]:hover {
     text-align: center;
     margin: 15px 0;
     color: #333; /* Vous pouvez choisir la couleur que vous préférez */
-}
-
-.activityDescription {
-    font-size: 16px;
-    margin: 5px 0;
-    color: #666; /* Vous pouvez choisir la couleur que vous préférez */
-    overflow: auto;
-    max-width: 230px;
-    word-wrap: break-word;
 }
 
 .btn-activity {
