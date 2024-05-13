@@ -21,3 +21,4 @@ package-lock.json
 DS_STORE
 .DS_STORE
 composer.lock
+/storage/icons
