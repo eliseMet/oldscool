@@ -54,6 +54,16 @@ class User extends Authenticatable
         return $this->belongsTo(Image::class);
     }
 
+    // Creation d'un attribute profileImage ($user->profileImage)
+    public function getProfileImageAttribute()
+    {
+        // Cette atribute retourne la photo de profile d'un user
+        $image = Image::join('default_profile_images', 'default_profile_images.image_id', '=', 'images.id')
+            ->where('default_profile_images.id', $this->image_id)
+            ->first();
+        return $image;
+    }
+
     public function posts()
     {
         return $this->hasMany(Post::class);

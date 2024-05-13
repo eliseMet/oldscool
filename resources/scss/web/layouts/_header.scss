@@ -1,3 +1,5 @@
+$pp-size: 2.5rem;
+
 .header {
     height: $header-h;
     background-color: $white;
@@ -23,5 +25,32 @@
 
     &-item {
         height: fit-content;
+    }
+
+    &-profile {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &-pp {
+        max-width: $pp-size;
+        max-height: $pp-size;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    &-dropdown {
+        &-menu {
+            padding-block: 0.5rem;
+        }
+
+        &-link {
+            padding: 0.5rem 1rem;
+
+            &:hover {
+                background-color: $grey-100;
+            }
+        }
     }
 }

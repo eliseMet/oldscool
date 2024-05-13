@@ -19,11 +19,30 @@
     
             @auth
                 <li>
-                    <img src="" alt="">
-                    {{ auth()->user()->image_id }}
+                    <div class="dropdown">
+                        <input type="checkbox" name="" id="profile-dropdown" class="dropdown-checkbox">
+                        <label for="profile-dropdown" class="header-profile">
+                            <img class="header-pp" src="/image/{{auth()->user()->profileImage->url}}" alt="{{auth()->user()->profileImage->alt}}">
+                            <span>
+                                {{ auth()->user()->firstname }} {{ auth()->user()->lastname }}
+                            </span>
+                        </label>
+                        <div class="dropdown-content">
+                            <ul class="header-dropdown-menu">
+                                <li class="header-dropdown-item">
+                                    <a class="header-dropdown-link" href="{{route('user.edit')}}">Mon Profil</a>
+                                </li>
+                                <li class="header-dropdown-item">
+                                    <a class="header-dropdown-link" href="{{route('user.logout')}}">Deconnexion</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <label class="dropdown-bg" for="profile-dropdown"></label>
+                    </div>
                 </li>
-                <li><a href="{{route('user.edit')}}">{{ auth()->user()->firstname }} {{ auth()->user()->lastname }}</a></li>
-                <li class="header-item"><a href="{{route('user.logout')}}" class="header-link btn-primary">Deconnexion</a></li>
+                {{-- <li class="header-item">
+                    <a href="{{route('user.logout')}}" class="header-link btn-primary">Deconnexion</a>
+                </li> --}}
             @endauth
         </ul>
     </div>

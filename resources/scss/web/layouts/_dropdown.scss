@@ -1,0 +1,41 @@
+.dropdown {
+    position: relative;
+
+    &-content {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(calc(100% + 4rem));
+        transition: 0.2s ease-in-out;
+        background-color: $white;
+        pointer-events: none;
+        z-index: 1;
+
+        @include rounded;
+        @include shadow-md;
+
+        opacity: 0;
+    }
+
+    &-bg {
+        position: fixed;
+        inset: 0;
+        display: none;
+    }
+
+    &-checkbox {
+        display: none;
+
+        &:checked~ {
+            .dropdown-content {
+                transform: translateY(100%);
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .dropdown-bg {
+                display: block;
+                // background-color: red;
+            }
+        }
+    }
+}
