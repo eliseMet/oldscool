@@ -1,4 +1,4 @@
-<label for="{{$id}}" {{ $attributes->class(["form-input"])}}>
+<label for="{{$id}}" {{ $attributes->class(["form-input", "input-text"])}}>
 
     <input 
 

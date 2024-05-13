@@ -13,21 +13,23 @@
 
 <section>
     <div class="card card-form">
-        <h1>Connexion</h1>
-        <form method="POST" action="{{route('user.authenticate')}}">
+        <h1 class="text-2xl">Connexion</h1>
+        <form class="flex flex-col gap-4" method="POST" action="{{route('user.authenticate')}}">
             @csrf
 
             @method("POST")
 
-           {{-- Email --}}
-            <x-form.formgroup id="email" label="Adresse mail :" :error="$errors->first('email')">
-                <x-form.input-text name="email" :value="old('email')"/>                    
-            </x-form.formgroup>
-
-            {{-- Password --}}
-            <x-form.formgroup id="password" label="Mot de passe :" :error="$errors->first('password')">
-                <x-form.input-text name="password" type="password" />                    
-            </x-form.formgroup>
+            <div>
+                {{-- Email --}}
+                 <x-form.formgroup id="email" label="Adresse mail :" :error="$errors->first('email')">
+                     <x-form.input-text name="email" :value="old('email')"/>                    
+                 </x-form.formgroup>
+     
+                 {{-- Password --}}
+                 <x-form.formgroup id="password" label="Mot de passe :" :error="$errors->first('password')">
+                     <x-form.input-text name="password" type="password" />                    
+                 </x-form.formgroup>
+            </div>
 
             <input type="submit" value="Se connecter">
         </form>

@@ -8,10 +8,13 @@
 }
 
 // Size
-.text-4xl {
-    @include text-4xl;
-}
 
-.text-2xl {
-    @include text-2xl;
+.text {
+    &-4xl {
+        @include text-4xl;
+    }
+
+    &-2xl {
+        @include text-2xl;
+    }
 }

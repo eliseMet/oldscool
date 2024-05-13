@@ -1,4 +1,4 @@
-input[type="submit"]{
+input[type="submit"] {
 
     grid-area: bt;
 
@@ -6,8 +6,9 @@ input[type="submit"]{
     background-color: $primary-600;
     color: $white;
     border-radius: 8px;
-    transition: 0.3s ease-in-out; /* transition entre deux elements*/
-    
+    transition: 0.3s ease-in-out;
+    /* transition entre deux elements*/
+
     min-width: 10rem;
     height: 3rem;
 
@@ -18,4 +19,14 @@ input[type="submit"]{
 
     font-size: 20px;
     font-family: 'Bebas Neue', sans-serif
+}
+
+.input-text {
+    background-color: $grey-100;
+    padding: 0.25rem 0.5rem;
+    @include rounded;
+
+    &:focus-within {
+        outline: 1px solid $primary-600;
+    }
 }

@@ -16,12 +16,12 @@
 
 <section>
     <div class="card-form">
-        <h1>Inscription</h1>
-        <div class="">
-            <form class="" method="POST" action="{{route('user.store')}}">
-                @csrf
-                @method("POST")
+        <h1 class="text-2xl">Inscription</h1>
+        <form class="flex flex-col gap-4" method="POST" action="{{route('user.store')}}">
+            @csrf
+            @method("POST")
 
+            <div>
                 {{-- Pseudo --}}
                 <x-form.formgroup id="pseudo" label="Pseudo :" :error="$errors->first('pseudo')">
                     <x-form.input-text name="pseudo" :value="old('pseudo')" />                    
@@ -69,13 +69,13 @@
                 <x-form.formgroup id="password_confirmation" label="Confirmez votre mot de passe :" :error="$errors->first('password_confirmation')">
                     <x-form.input-text name="password_confirmation" type="password"/>                    
                 </x-form.formgroup>
+            </div>
 
-                <input type="submit" value="Créer un compte">
-            </form>
-        </div>
-        <p class="text-discret" style="text-align: center; font-size: 10px;">
-            En devenant membre, vous acceptez nos <a href="{{ url('/ConditionsUtilisation') }}">Conditions d'utilisation</a> et notre <a href="{{ url('/PolitiqueConfidentialite') }}">Politique de confidentialité</a>
-        </p>
+            <input type="submit" value="Créer un compte">
+            <p class="text-discret" style="text-align: center; font-size: 10px;">
+                En devenant membre, vous acceptez nos <a href="{{ url('/ConditionsUtilisation') }}">Conditions d'utilisation</a> et notre <a href="{{ url('/PolitiqueConfidentialite') }}">Politique de confidentialité</a>
+            </p>
+        </form>
     </div>
 </section>
 
