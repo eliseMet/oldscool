@@ -1,8 +1,12 @@
 .header {
-    @include container;
-    height: 4rem;
-    display: flex;
-    justify-content: space-between;
+    height: $header-h;
+    background-color: $white;
+
+    &-container {
+        @include container;
+        display: flex;
+        justify-content: space-between;
+    }
 
     &-logo {
         object-fit: contain;

@@ -18,8 +18,7 @@
         <h2 class = "text-russo hero-title">Une Passion Partagée</h2>
         <p class="hero-text"> Vous êtes étudiant et vous souhaitez faire des rencontres tout en apprennant, ne cherchez plus, inscrivez-vous ! Vous êtes un jeune retraité qui souhaite transmettre une passion à la jeune génération, inscrivez-vous !
         </p>
-        <li><a href="/user/registration" class="btn-primary btn-xl"><strong>Nous rejoindre</strong></a></li>
-        <li><a href="/activities" class="btn-primary btn-xl"><strong>test</strong></a></li>
+        <a href="/user/registration" class="btn-primary btn-xl"><strong>Nous rejoindre</strong></a>
       </div>
     </div>
 </section>
@@ -31,74 +30,5 @@
     </reviews-cards-component>
 </section>
 
-
-
-<section class="container">
-    <div class="flex gap-4">
-        <x-card class="flex-1">
-            <x-slot:head>
-               <h2>Avis 1</h2> 
-        </x-slot:head>
-            <x-slot:main>
-                <div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt fugiat sequi nostrum. Facere, modi error minus esse corrupti perferendis provident vero dignissimos in voluptatum ratione libero harum sequi voluptatibus, iusto delectus dolorem maxime illum nesciunt sit doloremque. Molestiae doloremque commodi facere, eaque vel praesentium autem, officia nobis et rerum magnam.
-                    </p>
-                </div>
-            </x-slot:main>
-            <x-slot:footer>
-                <a class="btn-secondary">Secondary Button</a>
-            </x-slot:footer>
-        </x-card>
-
-        <x-card class="flex-1">
-            <x-slot:head>
-                <h2>Avis 2</h2> 
-            </x-slot:head>
-            <x-slot:main>
-                <div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores quae autem quaerat earum veniam pariatur, at molestiae ipsum explicabo, ad corrupti placeat neque voluptate asperiores modi amet odio? Sit corrupti odio dolorum fugit totam obcaecati modi iure tenetur nesciunt officia illo, provident fuga sed iste nobis nihil! Eius, autem.
-                    </p>
-                </div>
-            </x-slot:main>
-            <x-slot:footer>
-                <a class="btn-secondary">Secondary Button</a>
-            </x-slot:footer>
-        </x-card>
-
-        <x-card class="flex-1">
-            <x-slot:head>
-                <h2>H2 Title</h2> 
-            </x-slot:head>
-            <x-slot:main>
-                <div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores quae autem quaerat earum veniam pariatur, at molestiae ipsum explicabo, ad corrupti placeat neque voluptate asperiores modi amet odio? Sit corrupti odio dolorum fugit totam obcaecati modi iure tenetur nesciunt officia illo, provident fuga sed iste nobis nihil! Eius, autem.
-                    </p>
-                </div>
-            </x-slot:main>
-            <x-slot:footer>
-                <a class="btn-secondary">Secondary Button</a>
-            </x-slot:footer>
-        </x-card>
-
-        <x-card class="flex-1">
-            <x-slot:head>
-                <h2>H2 Title</h2> 
-            </x-slot:head>
-            <x-slot:main>
-                <div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores quae autem quaerat earum veniam pariatur, at molestiae ipsum explicabo, ad corrupti placeat neque voluptate asperiores modi amet odio? Sit corrupti odio dolorum fugit totam obcaecati modi iure tenetur nesciunt officia illo, provident fuga sed iste nobis nihil! Eius, autem.
-                    </p>
-                </div>
-            </x-slot:main>
-            <x-slot:footer>
-                <a class="btn-secondary">Secondary Button</a>
-            </x-slot:footer>
-        </x-card>
-    </div>
-</section>
 {{-- Vuejs App --}}
 @endsection

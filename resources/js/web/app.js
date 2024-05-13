@@ -34,3 +34,15 @@ if (document.querySelector('#profile-picture-select-component')) {
         })
     });
 }
+
+//Calendar users
+if (document.querySelector('#calendar-component')) {
+    const components = document.querySelectorAll('#calendar-component');
+    import('./components/Calendar.vue').then(exports => {
+        Array.from(components).map(component => {
+            const app = createApp({});
+            app.component('calendar-component', exports.default);
+            app.mount(component)
+        })
+    });
+}

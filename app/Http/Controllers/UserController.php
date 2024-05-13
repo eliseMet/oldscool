@@ -19,6 +19,11 @@ class UserController extends Controller
         return view('web.pages.connection');
     }
 
+    public function edit()
+    {
+        return view('web.pages.edit');
+    }
+
     public function store(UserRequest $request)
     {
         $validatedData = $request->validationData();
@@ -26,7 +31,7 @@ class UserController extends Controller
 
         if (Auth::attempt($validatedData)) {
             $request->session()->regenerate();
-            return redirect()->route('home');
+            return redirect()->route('homeProfile');
         }
         dd("not working");
     }
@@ -40,12 +45,20 @@ class UserController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('home');
+            return redirect()->route('homeProfile');
         }
 
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
+    }
+
+    public function info_user()
+    {
+        // Récupérer l'utilisateur connecté
+        $user = auth()->user();
+        // Passer les informations de l'utilisateur à la vue
+        return view('header', ['user' => $user]);
     }
 
     public function logout(Request $request)

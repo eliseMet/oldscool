@@ -1,6 +1,3 @@
 <footer class="footer">
-    {{-- Vuejs --}}
-    <div id="quiz-component" class="container">
-        <quiz-component />
-    </div>
+    <a href="/confidentialite">Confidentialité</a>
 </footer>

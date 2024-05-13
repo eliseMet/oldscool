@@ -14,10 +14,15 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
+// Route to unconnected users
+Route::middleware('guest')->get('/', function () {
     return view('web.pages.home');
 })->name("home");
+
+// Route to connected users
+Route::middleware('auth')->get('/profile', function () {
+    return view('web.pages.homeProfile');
+})->name("homeProfile");
 
 Route::name("user.")->prefix("user")->group(function () {
     //Registration page
@@ -30,6 +35,8 @@ Route::name("user.")->prefix("user")->group(function () {
     Route::post('/authenticate', [UserController::class, 'authenticate'])->name("authenticate");
     //Get all default pictures
     Route::get('/default-profile-pictures', [ImageController::class, 'getDefaultPictures']);
+    //Get profile page
+    Route::get('/edit', [UserController::class, 'edit'])->name("edit");
 
     Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 });
@@ -37,6 +44,10 @@ Route::name("user.")->prefix("user")->group(function () {
 Route::name("image.")->prefix("image")->group(function () {
     //Print image
     Route::get('/{filename}', [ImageController::class, 'show']);
+});
+
+Route::get('/confidentialite', function () {
+    return view('web.pages.confidentialite');
 });
 
 Route::get('/connection', function () {

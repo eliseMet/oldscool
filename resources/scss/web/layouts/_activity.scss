@@ -1,7 +1,8 @@
-.activity{
+.activity {
 
     &-list {
-        display: flex; /*aligne les elements de la liste*/
+        display: flex;
+        /*aligne les elements de la liste*/
         padding: 0;
         gap: 1rem;
         overflow-x: scroll;
@@ -9,37 +10,52 @@
         width: 100%;
         white-space: nowrap;
     }
-    &-box{
+
+    &-box {
         width: 250px;
         height: 600px;
         padding: 10px;
         border-radius: 10px;
         box-shadow: 0px 3px 8px 5px rgba(0, 0, 0, 0.12);
-        align-items: center; /* Centrer les éléments horizontalement */
+        align-items: center;
+        /* Centrer les éléments horizontalement */
         display: flex;
         flex-direction: column;
     }
+
     &-picture {
         width: 200px;
         height: 200px;
     }
+
     &-name {
-        font-size: 24px; /* Augmente la taille du texte */
-        text-align: center; /* Centre le texte dans la boîte */
-        margin: 10px 0; /* Ajoute un peu d'espacement au-dessus et au-dessous du prénom */
+        font-size: 24px;
+        /* Augmente la taille du texte */
+        text-align: center;
+        /* Centre le texte dans la boîte */
+        margin: 10px 0;
+        /* Ajoute un peu d'espacement au-dessus et au-dessous du prénom */
     }
+
     &-title {
         font-size: 20px;
         text-align: center;
         margin: 15px 0;
-        color: #333; /* Vous pouvez choisir la couleur que vous préférez */
+        color: #333;
+        /* Vous pouvez choisir la couleur que vous préférez */
     }
+
     &-description {
         font-size: 16px;
         margin: 5px 0;
-        color: #666; /* Vous pouvez choisir la couleur que vous préférez */
+        color: #666;
+        /* Vous pouvez choisir la couleur que vous préférez */
         overflow: auto;
         max-width: 230px;
         word-wrap: break-word;
+    }
+
+    &-size {
+        width: 40%;
     }
 }

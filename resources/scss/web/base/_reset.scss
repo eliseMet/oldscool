@@ -13,3 +13,7 @@ a {
 button {
     border: none;
 }
+
+main {
+    min-height: calc(100vh - $header-h - $footer-h);
+}
