@@ -71,7 +71,10 @@
                 </x-form.formgroup>
             </div>
 
-            <input type="submit" value="Créer un compte">
+            <div class="flex justify-center">
+                <input class="btn-primary" type="submit" value="Créer un compte">
+            </div>
+            
             <p class="text-discret" style="text-align: center; font-size: 10px;">
                 En devenant membre, vous acceptez nos <a href="{{ url('/ConditionsUtilisation') }}">Conditions d'utilisation</a> et notre <a href="{{ url('/PolitiqueConfidentialite') }}">Politique de confidentialité</a>
             </p>

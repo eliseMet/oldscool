@@ -1,0 +1,74 @@
+@extends('web.layouts.default')
+
+
+@section('title', "Inscription")
+@section('favicon')
+    <link rel="icon" href="{{ asset('img\web\LOGO.ico') }}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ asset('img\web\LOGO.ico') }}" type="image/x-icon"/>
+@endsection
+@section('meta-description', "En général, les balises meta description informent les internautes et éveillent leur intérêt avec un résumé court et pertinent de la page. Elles constituent une sorte d'argumentaire destiné à convaincre l'internaute que la page correspond exactement à sa recherche.")
+
+
+@section('content')
+
+
+
+
+<section>
+    <div class="card-form gap-8">
+        <h1 class="text-2xl">Votre profil</h1>
+        <div class="flex justify-between w-full">
+
+            <form class="flex flex-col gap-4" method="POST" action="{{route('user.update')}}">
+                @csrf
+                @method("PUT")
+    
+                <x-form.formgroup id="pseudo : " label="Pseudo :" :error="$errors->first('pseudo')">
+                    <x-form.input-text name="pseudo" :value="old('pseudo') ?? $user->pseudo" />                    
+                </x-form.formgroup>
+
+                {{-- Firstname --}}
+                <x-form.formgroup id="firstname" label="Prénom :" :error="$errors->first('firstname')">
+                    {{-- slot --}}
+                    <x-form.input-text name="firstname" :value="old('firstname') ?? $user->firstname" />                    
+                </x-form.formgroup>
+
+                {{-- Lastname --}}
+                <x-form.formgroup id="lastname" label="Nom :" :error="$errors->first('lastname')">
+                    <x-form.input-text name="lastname" :value="old('lastname') ?? $user->lastname"/>                    
+                </x-form.formgroup>
+
+                {{-- Image --}}
+                <x-form.formgroup id="image_id" label="Avatar :" :error="$errors->first('image_id')">
+                    <div id="profile-picture-select-component">
+                        <profile-picture-select-component :value="{{$user->image_id}}"/>
+                    </div>
+                </x-form.formgroup>
+
+                {{-- Email --}}
+                <x-form.formgroup id="email" label="Adresse mail :" :error="$errors->first('email')">
+                    <x-form.input-text name="email" :value="old('email') ?? $user->email"/>                    
+                </x-form.formgroup>
+
+                {{-- Birthday --}}
+                <x-form.formgroup id="birthday" label="Date de naissance :" :error="$errors->first('birthday')">
+                    <x-form.input-text name="birthday" type="date" :value="old('birthday') ?? $user->birthday"/>                    
+                </x-form.formgroup>
+
+                {{-- Phone Number --}}
+                <x-form.formgroup id="phone_number" label="Téléphone :" :error="$errors->first('phone_number')">
+                    <x-form.input-text name="phone_number" pattern="^(06|07|02)[0-9]{8}$" :value="old('phone_number') ?? $user->phone_number"/>                    
+                </x-form.formgroup>
+
+                <input class="btn-primary" type="submit" value="Modifier">
+                        
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+
+{{-- Vuejs App --}}
+@endsection

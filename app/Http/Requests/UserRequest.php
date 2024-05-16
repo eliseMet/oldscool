@@ -4,6 +4,8 @@ namespace App\Http\Requests;
 
 use Carbon\Carbon;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class UserRequest extends FormRequest
 {
@@ -28,15 +30,17 @@ class UserRequest extends FormRequest
     public function rules(): array
     {
         $date = Carbon::now()->subYears(18);
+        $id = Auth::id();
 
+        // Rule::unique('users')->ignore($this->user->id),
         return [
-            'pseudo' => ['required', 'alpha_num', 'unique:users,pseudo', 'max:20'],
+            'pseudo' => ['required', 'alpha_num', 'unique:users,pseudo,' . $id, 'max:20'],
             'firstname' => ['required', 'alpha', 'max:20'],
             'lastname' => ['required', 'alpha', 'max:20'],
-            'email' => ['required', 'unique:users,email', 'max:255', 'email'],
+            'email' => ['required', 'unique:users,email,' . $id, 'max:255', 'email'],
             'birthday' => ['required', 'date', 'before:' . $date],
-            'phone_number' => ['regex:/^(06|07)[0-9]{8}$/', 'unique:users,phone_number'],
-            'password' => ['required', 'min:8', 'confirmed']
+            'phone_number' => ['regex:/^(06|07)[0-9]{8}$/', 'unique:users,phone_number,' . $id],
+            'password' => [Rule::requiredIf(empty($id)), 'min:8', 'confirmed']
 
         ];
     }

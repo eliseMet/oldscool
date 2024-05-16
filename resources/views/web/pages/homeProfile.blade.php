@@ -19,8 +19,8 @@
         <div class="border rounded-1 activity-size">
             <h1 class="activity-title">Activités</h1>
             <div class="flex justify-center gap-4">
-                <a href="" class="btn-secondary"><strong>Déposer une activité</strong></a>
-                <a href="" class="btn-secondary"><strong>Rechercher une activité</strong></a>
+                <a href="{{route('post.create')}}" class="btn-secondary"><strong>Déposer une activité</strong></a>
+                <a href="{{route('post.index')}}" class="btn-secondary"><strong>Rechercher une activité</strong></a>
             </div>
         </div>
     </div>

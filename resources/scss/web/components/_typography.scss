@@ -8,7 +8,6 @@
 }
 
 // Size
-
 .text {
     &-4xl {
         @include text-4xl;
@@ -16,5 +15,18 @@
 
     &-2xl {
         @include text-2xl;
+        padding-block: 1rem;
     }
+
+    &-medium {
+        font-size: 1rem;
+    }
+}
+
+//Fonts
+
+$-title-2: 500 22px/24px "gt-eesti", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+.text-tl-2 {
+    font: $-title-2;
 }

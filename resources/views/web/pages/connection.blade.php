@@ -31,7 +31,9 @@
                  </x-form.formgroup>
             </div>
 
-            <input type="submit" value="Se connecter">
+            <div class="flex justify-center">
+                <input class="btn-primary" type="submit" value="Se connecter">
+            </div>
         </form>
     </div>
 </section>

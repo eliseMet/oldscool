@@ -3,8 +3,17 @@
     padding: 1rem;
 }
 
+.p-8 {
+    padding: 2rem;
+}
+
+.p-16 {
+    padding: 4rem;
+}
+
+
 .pt-8 {
-    padding: 2rem
+    padding-top: 2rem;
 }
 
 .px-4 {
@@ -22,11 +31,19 @@
     margin-bottom: 2rem;
 }
 
+.mt-4 {
+    margin-top: 1rem;
+}
+
 .mt-8 {
     margin-top: 2rem;
 }
 
 // Gap
+.gap-2 {
+    gap: 0.5rem;
+}
+
 .gap-4 {
     gap: 1rem;
 }
@@ -34,4 +51,12 @@
 // Gap
 .gap-8 {
     gap: 2rem;
+}
+
+.p-nt {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.m-l {
+    margin-left: 8rem;
 }

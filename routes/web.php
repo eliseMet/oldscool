@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,8 @@ Route::name("user.")->prefix("user")->group(function () {
     Route::get('/connection', [UserController::class, 'connection'])->name("connection");
     //Add a new user
     Route::post('/store', [UserController::class, 'store'])->name("store");
+    //Update user 
+    Route::put('/update', [UserController::class, 'update'])->name("update");
     //Authenticate a user
     Route::post('/authenticate', [UserController::class, 'authenticate'])->name("authenticate");
     //Get all default pictures
@@ -46,8 +49,24 @@ Route::name("image.")->prefix("image")->group(function () {
     Route::get('/{filename}', [ImageController::class, 'show']);
 });
 
+Route::name("post.")->prefix("post")->group(function () {
+    //Post activity page
+    Route::get('/create', [PostController::class, 'create'])->name("create");
+    //Add a new activity
+    Route::post('/store', [PostController::class, 'store'])->name("store");
+    //Lis post
+    Route::get('/', [PostController::class, 'index'])->name("index");
+});
+
+// Route::name("confidentialite")->prefix("confidentialite")->group(function() {
+
+// })
 Route::get('/confidentialite', function () {
     return view('web.pages.confidentialite');
+});
+
+Route::get('/apropos', function () {
+    return view('web.pages.apropos');
 });
 
 Route::get('/connection', function () {

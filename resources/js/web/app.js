@@ -46,3 +46,15 @@ if (document.querySelector('#calendar-component')) {
         })
     });
 }
+
+//Address search
+if (document.querySelector('#address-search-component')) {
+    const components = document.querySelectorAll('#address-search-component');
+    import('./components/AddressSearch.vue').then(exports => {
+        Array.from(components).map(component => {
+            const app = createApp({});
+            app.component('address-search-component', exports.default);
+            app.mount(component)
+        })
+    });
+}

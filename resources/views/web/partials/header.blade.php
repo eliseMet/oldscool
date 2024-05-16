@@ -2,7 +2,7 @@
     <div class="header-container">
         <ul class="header-left">
             <li class="header-item">
-                <a href="#" class="header-link">
+                <a @guest href="{{route('home')}}" @endguest @auth href="{{route('homeProfile')}}"@endauth class="header-link">
                     <picture>
                         <source srcset="{{asset('img/web/LOGO.webp')}}">
                         <img src="{{asset('img/web/LOGO.png')}}" alt="Logo Olds cool" class="header-logo" width="60" height="60">
@@ -10,6 +10,9 @@
                 </a>
             </li>
             <li><img src="{{asset('img/web/typo-black.png')}}" alt="typo Olds cool" class="header-logo" width="200" height="50"></li>
+            <li><a @guest href="{{route('home')}}" @endguest @auth href="{{route('homeProfile')}}"@endauth>Accueil</a></li>
+            <li><a href="{{route('post.index')}}">Activités</a></li>
+            <li><a href="{{route('post.create')}}">Créer une activité</a></li>
         </ul>
         <ul class="header-right">
             @guest

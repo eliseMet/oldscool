@@ -47,8 +47,33 @@
     }
 }
 
+.btn-changes {
+    @extend %btn;
+
+    color: red;
+    border: 1px solid $primary-500;
+
+    &:hover {
+        color: $primary-400;
+        border-color: $primary-400;
+    }
+
+    &:focus {
+        color: $primary-600;
+
+        border-color: $primary-600;
+    }
+}
+
 //SIZE
-.btn-xl{
+.btn-xl {
     @include text-xl;
     padding-inline: 2rem;
+}
+
+.btn-link {
+
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: underline;
 }

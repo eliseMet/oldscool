@@ -21,7 +21,9 @@ class UserController extends Controller
 
     public function edit()
     {
-        return view('web.pages.edit');
+        return view('web.pages.edit', [
+            'user' => Auth::user(),
+        ]);
     }
 
     public function store(UserRequest $request)
@@ -34,6 +36,15 @@ class UserController extends Controller
             return redirect()->route('homeProfile');
         }
         dd("not working");
+    }
+
+    public function update(UserRequest $request)
+    {
+        // $user = Auth::user();
+        $user = User::find(Auth::id());
+        $user->update($request->all());
+
+        return redirect()->back();
     }
 
     public function authenticate(Request $request)

@@ -1,5 +1,5 @@
 <template>
-    <div v-if="images">        
+    <div v-if="images">
         <input type="checkbox" class="picture-checkbox" id="image_id">
         <label class="picture-bg-label" for="image_id"></label>
 
@@ -11,15 +11,16 @@
 
         <div class="picture-content">
             <div v-for="image in images" :key="image.id">
-                <input class="picture-radio" type="radio" :id="'image' +image.id" name="image_id" :value="image.id" v-model="imageSelected"/>
-                <label :for="'image' +image.id">
-                    <img class="picture-item" :src="'/image/' + image.url" :alt="image.alt"/>
+                <input class="picture-radio" type="radio" :id="'image' + image.id" name="image_id" :value="image.id"
+                    v-model="imageSelected" />
+                <label :for="'image' + image.id">
+                    <img class="picture-item" :src="'/image/' + image.url" :alt="image.alt" />
                 </label>
             </div>
         </div>
     </div>
     <div v-else-if="isLoading">
-        chargement 
+        chargement
     </div>
     <div v-else>
         erreur
@@ -29,6 +30,10 @@
 <script>
 export default {
     name: "ProfilePictureSelect",
+
+    props: {
+        value: { type: Number, }
+    },
 
     data() {
         return {
@@ -40,52 +45,51 @@ export default {
     },
 
     methods: {
-        getDefaultProfilePicture(){
+        getDefaultProfilePicture() {
             this.isLoading = true
             fetch('/user/default-profile-pictures')
-            .then(response => {
-                if (!response.ok) {
-                    return response.json().then(error => {
-                        throw error;
-                    });
-                }
-                return response.json()
-            })
-            .then(data => {
-                this.images = data
-                this.imageSelected = this.images[0].id
-                this.isLoading = false
-            })
-            .catch(error => {
-                this.isLoading = false
-                this.error = error.message
-                console.log(error)
-            });
+                .then(response => {
+                    if (!response.ok) {
+                        return response.json().then(error => {
+                            throw error;
+                        });
+                    }
+                    return response.json()
+                })
+                .then(data => {
+                    this.images = data
+                    this.imageSelected = this.value ?? this.images[0].id
+                    this.isLoading = false
+                })
+                .catch(error => {
+                    this.isLoading = false
+                    this.error = error.message
+                    console.log(error)
+                });
         },
-        findImage(id){
+        findImage(id) {
             return this.images.find((image) => image.id == id);
         },
     },
-    created(){
+    created() {
         this.getDefaultProfilePicture()
     }
 }
 </script>
 
 <style scoped lang="scss">
-
-.img{
+.img {
     height: 100px;
     width: 100px;
 }
 
-.picture{
-    &-content{
+.picture {
+    &-content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
 
         position: absolute;
-        
+
         background-color: white;
         box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.14);
         border-radius: 0.5rem;
@@ -95,18 +99,22 @@ export default {
 
         pointer-events: none;
     }
-    &-item{
+
+    &-item {
         height: 80px;
         width: 80px;
     }
+
     &-checkbox {
         display: none;
     }
+
     &-checkbox:checked~.picture-content {
-            opacity: 1;
-            pointer-events: all;
+        opacity: 1;
+        pointer-events: all;
     }
-    &-bg-label{
+
+    &-bg-label {
         position: fixed;
         top: 50%;
         left: 50%;
@@ -116,10 +124,12 @@ export default {
 
         display: none;
     }
+
     &-checkbox:checked~.picture-bg-label {
-            display: block;
+        display: block;
     }
-    &-radio{
+
+    &-radio {
         display: none;
     }
 }
